@@ -10,7 +10,7 @@ import android.database.Cursor.FIELD_TYPE_STRING
 
 fun Cursor.rows() = moveToPosition(-1).let {
     object : Iterator<KursorRow> {
-        var index = 0
+        private var index = 0
         override fun next() = this@rows[index++]
         override fun hasNext() = index < rowSize
     }

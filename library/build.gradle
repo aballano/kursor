@@ -17,6 +17,16 @@ android {
         release {
             minifyEnabled false
         }
+        debug {
+            testCoverageEnabled = true
+        }
+    }
+    testOptions {
+        unitTests.all {
+            jacoco {
+                includeNoLocationClasses = true
+            }
+        }
     }
 }
 
