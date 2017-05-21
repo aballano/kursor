@@ -26,7 +26,7 @@ complexity:
   ComplexMethod:
     threshold: 10
   NestedBlockDepth:
-    threshold: 3
+    threshold: 4
 
 code-smell:
   active: true
@@ -39,8 +39,8 @@ formatting:
   active: true
   useTabs: false
   Indentation:
-    active: true
-    autoCorrect: true
+    active: false
+    autoCorrect: false
   ConsecutiveBlankLines:
     active: true
     autoCorrect: true
