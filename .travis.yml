@@ -1,0 +1,10 @@
+language: android
+jdk: oraclejdk8
+
+script:
+  - ./gradlew check
+  - ./gradlew detekt
+  - ./gradlew codeCoverageReport
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
