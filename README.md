@@ -48,7 +48,7 @@ print(kursor.toFormattedString(
 ))
 ```
 
-#### Note that since DB tables usually hold more than one type, the returned value types of foreach will be `Any?` so casting is needed in order to use the values
+#### Note that since DB tables usually hold more than one type, the returned value types of foreach will be `Any?` so casting is needed in order to use the values.
 
 
 Because of that you can also access by position by index, assuming that the value is not null:
