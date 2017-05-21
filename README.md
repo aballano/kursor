@@ -72,6 +72,8 @@ nullable types.
 Download
 ---
 
+Just replace 'x.x.x' with the version in the Jitpack badge on the top.
+
 With gradle: edit your build.gradle
 ```groovy
 allprojects {
