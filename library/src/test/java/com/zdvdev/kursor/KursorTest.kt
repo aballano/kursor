@@ -30,6 +30,14 @@ class KursorTest {
         deque = ArrayDeque<String>(row1 + row2)
     }
 
+    @Test fun `rows can be used as a List`() {
+        assertThat(kursor.rows().fold("") { acc, kursorRow ->
+            "$acc${kursorRow.reduce { acc, any -> "$acc$any"}}"
+        }).isEqualTo(deque.reduce { acc, value ->
+            acc + value
+        })
+    }
+
     @Test fun `rows foreach should iterate all the rows`() {
         kursor.rows().forEach { row ->
             row.forEach {

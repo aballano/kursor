@@ -11,10 +11,15 @@ kursor.forEach { row -> print(it + " ") }
 // 1 Daenerys Targaryen 2 John Snow
 ```
 
-It is also possible to just get a row iterator:
+It is also possible to just get a list of rows to perform typical List actions:
  
 ```kotlin
-kursor.rows() //...
+print(kursor.rows().fold("") { acc, kursorRow ->
+    "$acc ${kursorRow.reduce { acc, any -> "$acc $any"}}"
+})
+
+// outputs:
+//  1 Daenerys Targaryen 2 John Snow
 ```
 
 The `toFormattedString()` function returns a table-formatted string:

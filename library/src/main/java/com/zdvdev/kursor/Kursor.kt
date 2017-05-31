@@ -9,18 +9,16 @@ import android.database.Cursor.FIELD_TYPE_INTEGER
 import android.database.Cursor.FIELD_TYPE_STRING
 
 fun Cursor.rows() = moveToPosition(-1).let {
-    object : Iterator<KursorRow> {
-        private var index = 0
-        override fun next() = this@rows[index++]
-        override fun hasNext() = index < rowSize
+    ArrayList<KursorRow>().apply {
+        this@rows.forEach { add(it) }
     }
 }
 
-inline fun Cursor.forEach(action: (List<Any?>) -> Unit) {
+inline fun Cursor.forEach(action: (KursorRow) -> Unit) {
     for (index in 0 until rowSize) action(this[index])
 }
 
-inline fun Cursor.forEachIndexed(action: (Int, List<Any?>) -> Unit) {
+inline fun Cursor.forEachIndexed(action: (Int, KursorRow) -> Unit) {
     for (index in 0 until rowSize) action(index, this[index])
 }
 
