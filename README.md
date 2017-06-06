@@ -1,4 +1,5 @@
-# Kursor [![Build Status](https://travis-ci.org/aballano/kursor.svg?branch=master)](https://travis-ci.org/aballano/kursor)[![](https://jitpack.io/v/aballano/kursor.svg)](https://jitpack.io/#aballano/kursor)[![codecov](https://codecov.io/gh/aballano/kursor/branch/master/graph/badge.svg)](https://codecov.io/gh/aballano/kursor)
+# Kursor [![Build Status](https://travis-ci.org/aballano/kursor.svg?branch=master)](https://travis-ci.org/aballano/kursor)[![](https://jitpack.io/v/aballano/kursor.svg)](https://jitpack.io/#aballano/kursor)[![codecov](https://codecov.io/gh/aballano/kursor/branch/master/graph/badge.svg)](https://codecov.io/gh/aballano/kursor)<a href="http://www.methodscount.com/?lib=com.github.aballano%3Akursor%3A1.1"><img src="https://img.shields.io/badge/Methods and size-core: 116 | 10 KB-e91e63.svg"/></a>
+
 
 Extension functions for Android's Cursor object.
 
